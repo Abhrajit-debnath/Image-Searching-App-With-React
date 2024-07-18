@@ -1,0 +1,381 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url("/Images/bg.jpeg");
+  position: relative;
+  padding: 50px 0;
+}
+.banner h1 {
+  font-size: 4vw;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  font-weight: 500;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/Images/bg.jpeg");
+  background-position: center center;
+  background-size: cover;
+  filter: brightness(40%);
+  z-index: 1;
+}
+.input-field {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  height: 50px;
+  position: relative;
+}
+input {
+  position: relative;
+  width: 20vw;
+  z-index: 2;
+  padding: 0px 15px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+  border-radius: 5px;
+  height: 100%;
+}
+.banner button {
+  position: relative;
+  z-index: 2;
+  padding: 0px 15px;
+  height: 100%;
+  border: none;
+  font-weight: 300;
+  outline: none;
+  background-color: #07a081;
+  font-size: 1.3vw;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  transition: 0.5s;
+}
+.nav_buttons {
+  display: flex;
+  gap: 10px;
+}
+.nav_buttons button {
+  padding: 9px 26px;
+  height: 100%;
+  border: none;
+  font-weight: 300;
+  outline: none;
+  background-color: #07a081;
+  font-size: 1.3vw;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  transition: 0.5s;
+  margin: 20px 0;
+}
+
+.nav_buttons button:hover {
+  background-color: #004e3f;
+  transition: 0.5s;
+}
+
+.image_container,
+.video_container {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px 0px;
+  align-items: center;
+}
+
+.video_box video {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  border-radius: 10px;
+}
+.image_box,
+.video_box {
+  width: 23%;
+  position: relative;
+  height: 450px;
+}
+.video_box:hover .vid_download_btn {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.image_box:hover .download_btn {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.image_box img {
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.download_btn,
+.vid_download_btn {
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.5s;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  width: 100px;
+  font-size: 1.2vw;
+  border-radius: 8px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 10px 10px;
+  color: white;
+  background-color: #07a081;
+  text-align: center;
+  z-index: 1;
+}
+
+button:hover {
+  background-color: #006a55;
+  transition: 0.5s;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border-top: 5px solid green;
+  border-radius: 50%;
+  animation: loader 1s infinite linear;
+}
+
+@keyframes loader {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.search-history {
+  width: 68%;
+  top: 160px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  position: absolute;
+  z-index: 2;
+  text-align: left;
+  height: auto;
+  max-height: 200px;
+  box-shadow: 20px 20px 50px #0000002a;
+  overflow-y: auto;
+}
+
+.search-history li {
+  color: black;
+  padding: 20px 0;
+  list-style-type: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(60, 60, 60, 0.322);
+  cursor: pointer;
+}
+
+.result {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 400;
+  color: gray;
+  text-transform: capitalize;
+  font-size: 2vw;
+}
+
+/* select {
+  position: relative;
+  z-index: 2;
+  padding: 17px 5px;
+  outline: none;
+  border-radius: 5px;
+}
+select > option {
+  font-size: 15px;
+  padding: 10px 5px;
+} */
+
+select {
+  padding: 15px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  z-index: 2;
+}
+
+select::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #333;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+select > option {
+  padding: 100px;
+  font-size: 15px;
+}
+
+@media (max-width: 1200px) {
+  .result {
+    font-size: 3vw;
+  }
+  .input-field {
+    height: 40px;
+  }
+  .banner h1 {
+    font-size: 4vw;
+  }
+
+  input {
+    padding: 0px 15px;
+    font-size: 15px;
+  }
+  button {
+    padding: 0px 15px;
+    font-size: 1.5vw;
+  }
+  .download_btn {
+    font-size: 1.5vw;
+  }
+
+  .nav_buttons button {
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 1090px) {
+  .result {
+    font-size: 3vw;
+  }
+  .download_btn {
+    font-size: 1.7vw;
+  }
+  .image_box {
+    width: 30%;
+  }
+  .nav_buttons button {
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .result {
+    font-size: 4vw;
+  }
+  .download_btn {
+    font-size: 2.5vw;
+  }
+  .input-field {
+    height: 40px;
+  }
+  .banner h1 {
+    font-size: 5vw;
+  }
+
+  input {
+    padding: 0px 15px;
+    font-size: 15px;
+    width: 30vw;
+  }
+  .banner button {
+    padding: 0px 15px;
+    font-size: 3vw;
+  }
+
+  .image_box {
+    width: 45%;
+  }
+
+  .nav_buttons button {
+    font-size: 3vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .result {
+    font-size: 5vw;
+  }
+  .download_btn {
+    font-size: 3.7vw;
+  }
+
+  .image_box {
+    width: 93%;
+  }
+
+  .banner button {
+    padding: 0px 15px;
+    font-size: 2.3vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .result {
+    font-size: 6vw;
+  }
+  .input-field {
+    height: 40px;
+  }
+  .banner h1 {
+    font-size: 8vw;
+  }
+
+  input {
+    padding: 0px 15px;
+    font-size: 15px;
+    width: 45vw;
+  }
+  .banner button {
+    padding: 0px 15px;
+    font-size: 4.2vh;
+  }
+  .nav_buttons button {
+    font-size: 5vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .result {
+    font-size: 7vw;
+  }
+  .download_btn {
+    font-size: 5vw;
+  }
+}
