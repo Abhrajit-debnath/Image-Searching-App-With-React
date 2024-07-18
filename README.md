@@ -1,8 +1,12 @@
-# React + Vite
+# Image Searching App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+Welcome to the Image Searching App! This React-based application allows you to search for stock images and videos, view results, and download them to your system. By integrating the Pixabay API, this app fetches high-quality media content based on user queries.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- **Search Functionality:** Easily find stock images and videos by entering keywords.
+- **Download Media:** Download images and videos directly to your system with a single click.
+- **Pixabay Integration:** Leverages the Pixabay API to fetch high-quality images and videos.
+- **Responsive Design:** Ensures a seamless experience across various devices.
